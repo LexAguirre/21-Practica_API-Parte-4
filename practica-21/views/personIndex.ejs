@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de personas</title>
+  </head>
+  <body>
+    <div class="headerlista">
+      <h1>Lista de personas</h1>
+    </div>
+
+    <table class="styled-table">
+      <tr>
+        <th>NSS</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Tipo de sangre</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <!--Dentro de la tabla se estara ingresando la informacion proveniente del json-->
+      <% Object.keys(person).forEach(function(prop) { %>
+      <!--Menciona que por cada llave de person utilizara un prop-->
+      <tr>
+        <td><%- person[prop].nss %></td>
+        <td><%- person[prop].nombre %></td>
+        <td><%- person[prop].edad %></td>
+        <td><%- person[prop].tipoSangre %></td>
+        <td><a href="<%= `deletePerson/${person[prop]._id}` %>">Delete</a></td>
+        <td><a href="<%= `findById/${person[prop]._id}` %>">Update</a></td>
+      </tr>
+      <% }); %>
+    </table>
+
+    <br />
+    <a href="/">Regresar</a><br />
+
+    <!--<script> intento de crear el codigo con un script
+      let tablePer = document.querySelector("#persons");
+      let row = tablePer.insertRow(-1);
+
+      let colNss = row.insertCell(0);
+      let colName = row.insertCell(1);
+      let colAge = row.insertCell(2);
+      let colBloodType = row.insertCell(3);
+      let colAction = row.insertCell(4);
+
+      colNss.innerHTML = person;
+      colName.innerHTML = "Name";
+      colAge.innerHTML = "Age";
+      colBloodType.innerHTML = "ooo";
+    </script>-->
+  </body>
+</html>

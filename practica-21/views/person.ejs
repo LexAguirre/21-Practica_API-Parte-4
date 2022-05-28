@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <title>Agregar personas</title>
+  </head>
+  <body>
+    <h1>Agregar Persona</h1>
+
+    <form action="/addPerson" method="post">
+      <label for="nss">NSS:</label>
+      <input type="text" id="nss" name="nss" /><br /><br />
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" /><br /><br />
+      <label for="edad">Edad:</label>
+      <input type="text" id="edad" name="edad" /><br /><br />
+      <label for="tipoSangre">Tipo de sangre:</label>
+      <input type="text" id="tipoSangre" name="tipoSangre" /><br /><br />
+      <!--Se crea un formulario para que reciba la informacion ingresada y la manda a person.js para que pueda ingresarla a MongoDB -->
+      <input type="submit" value="submit" />
+    </form>
+    <br />
+    <a href="/">Regresar</a><br />
+  </body>
+</html>
