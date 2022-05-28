@@ -35,16 +35,16 @@ router.post("/addPerson", function (req, res) {
 //DELETE PERSON - findByIdAndRemove
 router.get("/deletePerson/:id", function (req, res, next) {
   Person.findByIdAndRemove(req.params.id, req.body, function (err, post) {
-    if (err) return next(err);
-    res.redirect("/listPerson");
+    if (err) return next(err); // Se crea la funcion la cual encontrara y eliminara el objeto deseado
+    res.redirect("/listPerson"); // Se recarga la pagina para actualizarse
   });
 });
 
 //EDIT PERSON - findById
 router.get("/findById/:id", function (req, res, next) {
   Person.findById(req.params.id, function (err, person) {
-    if (err) return next(err);
-    res.render("personUpdate", { person });
+    if (err) return next(err); // Se crea la funcion la cual encontrara y se redirigira a la pagina de edicion
+    res.render("personUpdate", { person }); //Renderiza la pagina de edicion
   });
 });
 
@@ -56,12 +56,12 @@ router.post("/updatePerson", function (req, res, next) {
       edad: req.body.edad,
       tipoSangre: req.body.tipoSangre,
       nss: req.body.nss,
-    },
+    }, //Actualiza la base de datos con lo editado en la pagina
     function (err, post) {
       if (err) return next(err);
       res.redirect("/listPerson");
     }
-  ); //Se creo una nueva identidad para que permita agregar a un nuevo objeto en el coleccion de MongoDB
+  ); //Se redirige a la pagina de la tabla actualizada
 });
 
 module.exports = router;

@@ -20,6 +20,7 @@
         <th>Tipo de sangre</th>
         <th></th>
         <th></th>
+        <!--Se crean dos columnas sin nombre-->
       </tr>
       <!--Dentro de la tabla se estara ingresando la informacion proveniente del json-->
       <% Object.keys(person).forEach(function(prop) { %>
@@ -31,6 +32,7 @@
         <td><%- person[prop].tipoSangre %></td>
         <td><a href="<%= `deletePerson/${person[prop]._id}` %>">Delete</a></td>
         <td><a href="<%= `findById/${person[prop]._id}` %>">Update</a></td>
+        <!--Se crean la edicion y eliminacion del documento por medio de un hipervinculo-->
       </tr>
       <% }); %>
     </table>

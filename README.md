@@ -1,6 +1,6 @@
 ![Logo](img/ucol-logo.jpg)
 
-# Práctica 20: API Parte 3
+# Práctica 21: API Parte 4
 
 > Segunda Parcial
 
@@ -17,13 +17,13 @@
 
 En las prácticas anteriores hemos abordado tópicos que nos van a ayudar a construir nuestra RESTFUL API conectada a una fuente de datos de MongoDB. Para dar paso a este nuevo proyecto será necesario comenzar desde cero, tener un proyecto nuevo, debido a que la organización de los directorios y archivos es clave para el posterior mantenimiento de nuestros servicios.
 
-En esta práctica, utilizaremos una parte del código de la práctica 16, práctica 17 y práctica 18.
+En esta práctica, utilizaremos una parte del código de la práctica 16, práctica 17, práctica 18, práctica 19 y la práctica 20.
 
-> ENTREGA: VIERNES 26 DE MAYO DEL 2022
+> ENTREGA: DOMINGO 29 DE MAYO DEL 2022
 
 ## EXPLICACIÓN DEL PROCESO
 
-1. Crea una carpeta llamada "practica_19"
+1. Crea una carpeta llamada "practica_21"
 
 2. Inicializa NPM con npm init -y
 
@@ -65,9 +65,19 @@ En esta práctica, utilizaremos una parte del código de la práctica 16, práct
 
 21. En mongodb se crea un documento para que se pueda mandar llamar un objeto json
 
-22. El objeto json se iterara para que se pueda acceder a las llaves y ingrese la informacion a la tabla separandola por variables
+22. El objeto json se iterara para que se pueda acceder a las llaves y ingrese la informacion a la tabla separando la por variables
 
-23. Ahora se ejecuta el comando "npx nodemon server" y acccede a http://localhost:3000/person
+23. Para continuar ahora editaremos los documentos de la base de datos asi como podremos eliminar para hacer eso se ocupara insertar dos columnas en la tabla
+
+24. Para eliminar se creara una funcion en el archivo person de la carpeta router este sera un get y se encargara de buscar el documento por su id y eliminarlo
+
+25. En el archivo del listado se crea una liga que active la funcion de eliminar.
+
+26. Para actualizar un objeto se ocupa localizar primero con su id para que se mande a otra pagina la cual ya tendra la infrmacion precargada en los cuadros de textos para que se pueda editar
+
+27. Para despues la informacion ingresada sea actualizada en la base de datos
+
+28. Ahora se ejecuta el comando "npx nodemon server" y acccede a http://localhost:3000/person
 
 ## RECURSOS
 
